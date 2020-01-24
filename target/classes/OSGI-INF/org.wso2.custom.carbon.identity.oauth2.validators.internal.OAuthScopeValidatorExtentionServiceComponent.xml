@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="identity.inbound.auth.scope.validators.component" activate="activate">
+    <reference name="identity.entitlement.service" interface="org.wso2.carbon.identity.entitlement.EntitlementService" cardinality="1..1" policy="dynamic" bind="setEntitlementService" unbind="unsetEntitlementService"/>
+    <implementation class="org.wso2.custom.carbon.identity.oauth2.validators.internal.OAuthScopeValidatorExtentionServiceComponent"/>
+</scr:component>
