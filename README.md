@@ -1,5 +1,9 @@
 # Custom-scope-validator 
-This is a custom scope validator which can be used as a extention though the scope validation process in WSO2 Identity Server
+This is a custom scope validator which can be used as a extention though the scope validation process in WSO2 Identity Server.
+
+Since the functionality should affect all across the system, the allowed scopes need to be defined for the system-wide. Hence, this solution has introduced a scope configuration as a separate scope configuration file. Once the allowed scopes are configured in there, every implicit authentication requests which are coming with scope parameters are validating against the predefined scopes in that scope configuration file. As per the validation process, it permits scopes to proceed on the token request and drop the undefined scopes in the implicit request.
+Thus due to this approach tokens are issued only to the allowed scopes.
+
 
 This component has been tested with WSO2 IS 5.9.0 and can apply all the previous WSO2 IS versions
 
